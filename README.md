@@ -1,7 +1,7 @@
 # Portfolio
 Portfolio ! Include STT, whisper_tuning, GUI .etc
 
-# Local_STT (
+# Local_STT 
 ## 簡介
 ###使用需求：本地、windows環境、降噪、STT、語者分離、存入csv檔案
 本地語音轉文字STT轉換器，使用地端模型進行語音轉文字轉換，並監聽指定資料夾中的聲音文件自動轉換。
