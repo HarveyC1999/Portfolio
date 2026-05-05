@@ -9,7 +9,6 @@ import datetime
 import warnings
 warnings.filterwarnings("ignore")
 
-# In[3]:
 
 
 ##DB login
@@ -26,17 +25,10 @@ def decrypt_data(encrypt_msg):
     return back_text.decode('utf-8')
 
 
-# In[15]:
-
-# In[1]:
 import re
 import time
 import warnings
 warnings.filterwarnings("ignore")
-
-# # Correcting~~
-
-# In[8]:
 
 
 def replace_text(text):
@@ -50,11 +42,6 @@ def replace_text(text):
             text = text.replace(f'{incorrect}',f'{correct}')
     return text
 
-
-# In[14]:
-
-
-#秒數轉換格式
 def format_time(seconds):
     if seconds >= 3600:
         return time.strftime('%H:%M:%S', time.gmtime(seconds))

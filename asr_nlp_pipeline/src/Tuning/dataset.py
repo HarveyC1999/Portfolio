@@ -58,16 +58,13 @@ for i in range(num_iterations):
                         break
                 
 # In[3]:
-# 建立資料集
 data = {
     "audio": audio_files,
     "sentence": transcriptions
 }
 
-# 將資料轉換成 Dataset
 custom_dataset = Dataset.from_dict(data)
 
-# 建立 DatasetDict 並分割成訓練和測試集
 common_voice = DatasetDict()
 split_dataset = custom_dataset.train_test_split(test_size=0.2)
 common_voice["train"] = split_dataset["train"]

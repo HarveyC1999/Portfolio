@@ -1,24 +1,123 @@
-# Portfolio
-Portfolio ! Include STT, whisper_tuning, GUI .etc
+# ASR + NLP Pipeline for Keyword Extraction
 
-# Local_STT 
-## 簡介
-###使用需求：本地、windows環境、降噪、STT、語者分離、存入csv檔案
-本地語音轉文字STT轉換器，使用地端模型進行語音轉文字轉換，並監聽指定資料夾中的聲音文件自動轉換。
+This project implements an end-to-end speech-to-text (ASR) and NLP pipeline using Whisper and Python to process unstructured audio data and extract meaningful keywords.
 
-## 功能
-- mp3轉wav，for 語者分離
-- 使用STT模型(這裡用whisper，本地端)進行語音轉文字轉換
-- 監聽指定資料夾中的wav文件
-- 自動處理新添加的wav文件並生成對應的文字文件
+The system is designed to automate transcription, improve searchability, and reduce manual text processing efforts in real-world business scenarios.
 
-## 環境
-- Windows
-- python 3.10
-- 依賴包： requirements.txt
+---
 
-# whisper Tuning
-## tuning whisper and trun .safetensors into .bin using csv files as datasets
+## 🚀 Features
 
-# datasearch_gui
-## 連接oracle資料庫，可新增式條件、動態顯示介面，提供file_link到目標資料夾
+- Speech-to-text transcription using Whisper
+- Keyword extraction and normalization
+- Post-processing and correction pipeline
+- Modular design for extensibility
+- GUI-based demo interface
+
+---
+
+## 🧠 Problem
+
+Processing audio data manually is time-consuming and inefficient.  
+Business users often need to extract key information from conversations, recordings, or speech data.
+
+This project aims to:
+- Automate transcription
+- Extract meaningful keywords
+- Enable faster search and analysis
+
+---
+
+## 🏗️ Architecture
+
+![Architecture](./architecture.png)
+
+### Pipeline Overview
+
+1. Audio input is processed using Whisper for speech-to-text transcription  
+2. Raw transcript is cleaned and normalized using rule-based preprocessing  
+3. NLP techniques are applied for keyword extraction and matching  
+4. Results are stored as structured output for downstream analysis  
+
+---
+
+## 🛠️ Tech Stack
+
+- Python3.9+  
+- Whisper (OpenAI)
+- Pyannote (Speaker Diarization)  
+- NLP (custom keyword extraction, normalization)  
+- Regex / rule-based processing  
+- (Optional) GUI interface  
+
+---
+
+## 📂 Project Structure
+
+GUI/
+└── QAUI.py # GUI interface
+
+STT/
+├── STT_demo.py # Speech-to-text demo
+├── correcting.py # Text correction & normalization
+
+Tuning/
+├── dataset.py # Dataset handling
+├── 模型轉換.py # Model conversion / tuning
+
+README.md
+
+
+---
+
+## 📊 Results
+
+- Achieved >95% keyword matching accuracy after fine-tuning and keyword normalization
+- Reduced manual text processing effort significantly
+- Designed for internal usage scenarios (300+ users)
+
+---
+
+## 🧪 Example
+
+**Input (Audio):**
+"Customer wants to cancel the policy due to high premium"
+
+**Output:**
+
+Keywords: ["cancel policy", "high premium"]
+
+
+---
+
+## ▶️ How to Run
+
+```bash
+pip install -r requirements.txt
+python STT/STT_demo.py
+
+(Optional GUI)
+python GUI/QAUI.py
+
+## Optional Dependencies
+
+Some advanced features require additional setup:
+
+- pyannote.audio (speaker diarization)
+- cx_Oracle (database integration)
+
+These are not required for basic pipeline execution.
+
+⚙️ Future Improvements
+Improve NLP model performance (currently rule-based + tuning)
+Integrate vector search / semantic search
+Deploy as API service
+Add real-time streaming support
+
+📌 Notes
+
+This project focuses on practical application of ASR + NLP in business workflows rather than pure model research.
+
+👤 Author
+
+Harvey Chang
