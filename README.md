@@ -113,16 +113,16 @@ Some advanced features require additional setup:
 
 These are not required for basic pipeline execution.
 
-⚙️ Future Improvements
+## ⚙️ Future Improvements
 Improve NLP model performance (currently rule-based + tuning)
 Integrate vector search / semantic search
 Deploy as API service
 Add real-time streaming support
 
-📌 Notes
+## 📌 Notes
 
 This project focuses on practical application of ASR + NLP in business workflows rather than pure model research.
 
-👤 Author
+## 👤 Author
 
-Harvey Chang
+Chung-Han(Harvey) Chang
