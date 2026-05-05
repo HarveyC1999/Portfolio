@@ -103,7 +103,7 @@ python STT/STT_demo.py
 
 (Optional GUI)
 python GUI/QAUI.py
-
+```
 ## Optional Dependencies
 
 Some advanced features require additional setup:
