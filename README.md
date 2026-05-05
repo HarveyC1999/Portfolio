@@ -54,16 +54,21 @@ This project aims to:
 
 ## 📂 Project Structure
 
-GUI/
-└── QAUI.py # GUI interface
+GUI /
 
-STT/
+|── QAUI.py # GUI interface
+
+STT /
+
 ├── STT_demo.py # Speech-to-text demo
+
 ├── correcting.py # Text correction & normalization
 
 Tuning/
+
 ├── dataset.py # Dataset handling
-├── 模型轉換.py # Model conversion / tuning
+
+├── model_conversion.py # Model conversion / tuning
 
 README.md
 
