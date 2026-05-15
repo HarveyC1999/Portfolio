@@ -34,14 +34,21 @@ This analysis evaluates whether the redesigned flow leads to statistically signi
 ## 📂 Project Structure
 
 product-conversion-experiment/
+
 │
+
 ├── data/
+
 ├── notebooks/
+
 ├── sql/
+
 ├── dashboard/
+
 ├── README.md
 
 
+---
 ## 📊 Dataset
 
 The dataset contains simulated experiment data including:
@@ -54,6 +61,8 @@ Country
 Session duration
 
 Total records: 10,000+
+
+---
 
 ##　📈 Analysis Workflow
 
